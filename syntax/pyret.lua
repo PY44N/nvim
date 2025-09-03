@@ -51,8 +51,9 @@ vim.cmd([[syn region pyretString start=/'/ skip=/\\./ end=/'/]])
 vim.cmd([[syn region pyretString start=/```/ end=/```/]])
 
 -- Numbers
-vim.cmd([[syn match pyretNumber "\<\d\+\>"]])
-vim.cmd([[syn match pyretNumber "\<\d\+\.\d*\>"]])
+vim.cmd([[syn match pyretNumber "\(^\|[^[:alnum:]_-]\)\@<=-\?\d\+\([^[:alnum:]_.-]\|$\)\@="]])
+vim.cmd([[syn match pyretNumber "\(^\|[^[:alnum:]_-]\)\@<=-\?\d\+\.\d*\([^[:alnum:]_.-]\|$\)\@="]])
+vim.cmd([[syn match pyretNumber "\(^\|[^[:alnum:]_-]\)\@<=-\?\d*\.\d\+\([^[:alnum:]_.-]\|$\)\@="]])
 
 -- Highlight links
 vim.cmd([[hi def link pyretComment Comment]])
