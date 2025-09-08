@@ -23,9 +23,11 @@ vim.cmd([[syn match pyretDelimeter '::']])
 
 -- Keywords
 vim.cmd([[syn keyword pyretBasic var fun end with: sharing: data include import provide as try: except when]])
-vim.cmd([[syn keyword pyretBasic for from check: where: doc: and or not else: if else cases]])
+vim.cmd([[syn keyword pyretBasic for from check check: where: doc: and or not else: if else cases]])
 vim.cmd([[syn keyword pyretBasic is is== is=~ is<=> is-not is-not== is-not=~ is-not<=> raises]])
-vim.cmd([[syn keyword pyretBasic deriving ref graph: m-graph: block: satisfies violates shadow lam type type-let provide-types newtype]])
+vim.cmd(
+  [[syn keyword pyretBasic deriving ref graph: m-graph: block: satisfies violates shadow lam type type-let provide-types newtype]]
+)
 vim.cmd([[syn keyword pyretBasic let rec letrec ask: table: extend using row: select extract order sieve by spy]])
 
 -- Operators
