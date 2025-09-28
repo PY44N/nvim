@@ -70,4 +70,6 @@ vim.cmd("let b:current_syntax = 'pyret'")
 vim.bo.indentexpr = "v:lua.require('config.pyret_indent').get_pyret_indent(v:lnum)"
 vim.bo.indentkeys = "0{,0},!,o,O,=|,=case,=catch,=else,=elseif,=end"
 
-vim.bo.iskeyword = vim.bo.iskeyword .. ",-,:"
+-- vim.bo.iskeyword = vim.bo.iskeyword .. "-,:"
+-- vim.bo.iskeyword = vim.bo.iskeyword .. "-,:"
+vim.opt_local.iskeyword:append({ "-", ":" })
